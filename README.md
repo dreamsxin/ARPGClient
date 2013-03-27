@@ -18,5 +18,5 @@ QQ:176013762
 Email:dreamsxin@qq.com
 
 ![Screenshot](http://as3chat.googlecode.com/files/login.jpg)
-![Screenshot](http://as3chat.googlecode.com/files/screenshot.jpg)
+![Screenshot](http://as3chat.googlecode.com/files/hello.jpg)
 
