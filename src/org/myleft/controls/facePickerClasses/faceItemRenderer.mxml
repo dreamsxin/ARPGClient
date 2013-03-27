@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/mx" toolTip="{_label}" click="itemrenderer_clickHandler(event)">
+	<fx:Metadata>
+		[Event(name="itemClick", type="mx.events.ItemClickEvent")]  /*在ItemRender中声明itemClickEvent事件*/
+	</fx:Metadata>
+	<fx:Script>
+		<![CDATA[
+			[Bindable]
+			private var _data:Object;
+			[Bindable]
+			private var _label:String;
+			[Bindable]
+			private var _icon:String;
+			
+			override public function set data(value:Object):void{
+				_label=value.label;
+				_icon=value.icon;
+				_data=value;
+			}
+			override public function get data():Object{
+				return _data;
+			}
+			
+			import mx.events.ItemClickEvent;
+
+			protected function itemrenderer_clickHandler(event:MouseEvent):void
+			{
+				var e:ItemClickEvent = new ItemClickEvent(ItemClickEvent.ITEM_CLICK, true);
+				e.item = data;
+				e.index = itemIndex;
+				dispatchEvent(e);
+			}
+
+		]]>
+	</fx:Script>
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="hovered"/>
+		<s:State name="selected"/>
+	</s:states>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<mx:Image horizontalCenter="0" verticalCenter="0" source="{_icon}"/>
+</s:ItemRenderer>
