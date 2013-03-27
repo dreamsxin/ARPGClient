@@ -62,7 +62,7 @@ package
 		private var server:MyleftServer;
 		
 		private var param:Object;
-		private var host:String = '192.168.1.101';
+		private var host:String = 'myleft.org';
 		private var port:int = 8888;
 		private var userJlist:JList
 		private var model:VectorListModel = new VectorListModel;
