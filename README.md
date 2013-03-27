@@ -17,5 +17,6 @@ A*寻路的开源库：http://code.google.com/p/baseoneaslib/
 QQ:176013762
 Email:dreamsxin@qq.com
 
+![Screenshot](http://as3chat.googlecode.com/files/arpg.jpg)
 ![Screenshot](http://as3chat.googlecode.com/files/screenshot.jpg)
 
