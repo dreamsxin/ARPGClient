@@ -53,8 +53,6 @@ package
 	import org.myleft.events.CharacterEvent;
 	import org.myleft.events.SocketConnectionEvent;
 	import org.myleft.geom.IntPoint;
-	
-	import skins.ALookAndFeel;
 
 	[SWF(backgroundColor="#869ca7", frameRate="10")]//,frameRate="30"
 	public class arpg extends Sprite
@@ -123,7 +121,6 @@ package
 			this.cacheAsBitmap = true;
 			AsWingManager.initAsStandard(this);
 			CursorManager.getManager().showCustomCursor(CursorAnimation.defaultCursor);
-			UIManager.setLookAndFeel(new ALookAndFeel());
 			
 			param = root.loaderInfo.parameters;
 			if (param['host']) {
@@ -211,9 +208,6 @@ package
 			loginDialog.usernameText.setText(username);
 			loginDialog.setLocationXY((stage.stageWidth-loginDialog.width)*0.5, (stage.stageHeight-loginDialog.height)*0.5);
 			loginDialog.loginButton.addActionListener(loginClickHandle);
-			loginDialog.connectButton.addActionListener(connectClickHandle);
-			loginDialog.hostText.setText(host.toString());
-			loginDialog.portText.setText(port.toString());
 	
 			loginDialog.show();
 			
@@ -239,6 +233,10 @@ package
 			server.addEventListener(Define.EV_TYPE_ROOM_ADD, eventHandle);
 			server.addEventListener(Define.EV_TYPE_MOVE, eventHandle);
 			server.addEventListener(Define.EV_TYPE_DOING, eventHandle);
+			
+			progressDialog.setTitle('连接中...');
+			progressDialog.show();
+			server.connect(host, port);
 
 			stage.addEventListener(Event.RESIZE, resizeHandler);
 		}
@@ -388,7 +386,6 @@ package
 			switch(e.type)
 			{
 				case Define.CONNECT:
-					loginDialog.setConnectEnabled(false);
 					loginDialog.setLoginEnabled(true);
 					break;
 				case Define.EV_TYPE_AUTH_OTHER_LOGIN:
@@ -398,7 +395,6 @@ package
 					break;
 				case Define.CLOSE:
 					this.mylogout();
-					loginDialog.setConnectEnabled(true);
 					loginDialog.setLoginEnabled(false);
 					loginDialog.show();					
 					break;
@@ -455,7 +451,6 @@ package
 					loginDialog.hide();
 					mainScene.render();
 					this.addChildAt(view, 0);//this.numChildren
-					JOptionPane.showMessageDialog("Hello", "登陆成功");
 					break;
 				case Define.EV_TYPE_AUTH_FAILURE:
 					loginDialog.show();
@@ -560,13 +555,6 @@ package
 		private function doing(e:CharacterEvent):void
 		{
 			server.doing(e.body);
-		}
-		//连接
-		private function connectClickHandle(e:AWEvent):void
-		{
-			progressDialog.setTitle('连接中...');
-			progressDialog.show();
-			server.connect(loginDialog.hostText.getText(), int(loginDialog.portText.getText()));
 		}
 		
 		//登陆

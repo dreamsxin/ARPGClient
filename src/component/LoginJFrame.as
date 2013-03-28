@@ -16,11 +16,8 @@ package component
 		private var loginForm:Form;
 		public var usernameText:JTextField;
 		public var passwordText:JTextField;
-		public var hostText:JTextField;
-		public var portText:JTextField;
 		public var characterComboBox:JComboBox;
 		
-		public var connectButton:JButton;
 		public var loginButton:JButton;
 		public var regButton:JButton;
 		public function LoginJFrame(owner:Object=null, title:String='登陆', modal:Boolean=false)
@@ -40,32 +37,17 @@ package component
 			passwordText = new JTextField;
 			passwordText.setPreferredWidth(100);
 			this.addLabelRow(passwordText, "密码");			
-			
-			hostText = new JTextField();
-			hostText.setPreferredWidth(100);
-			this.addLabelRow(hostText, "主机");
-			
-			portText = new JTextField();
-			portText.setPreferredWidth(100);
-			this.addLabelRow(portText, "端口");
-			
-			connectButton = new JButton("连接");
-			
+
 			loginButton = new JButton("登陆");
 			loginButton.setEnabled(false);
 			
 			regButton = new JButton("注册");
 			
 			var buttonPane:JPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 16, 5));
-			buttonPane.appendAll(connectButton, loginButton, regButton);
+			buttonPane.appendAll(loginButton, regButton);
 			loginForm.append(buttonPane);
 			
 			this.setContentPane(loginForm);
-		}
-		
-		public function setConnectEnabled(b:Boolean):void
-		{
-			connectButton.setEnabled(b);
 		}
 		
 		public function setLoginEnabled(b:Boolean):void
