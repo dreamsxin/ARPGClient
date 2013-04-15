@@ -17,14 +17,18 @@ ISO(Isometric)库AS3isolib：http://code.google.com/p/as3isolib/
 A*寻路的开源库：http://code.google.com/p/baseoneaslib/
 
 
-其它项目
+Text Chat:
+
 https://github.com/dreamsxin/AS3Chat
 
-服务端
+Server:
+
 https://github.com/dreamsxin/ARPGServer
 
 
 QQ:176013762
+
+Home:http://www.myleftstudio.org/
 
 Email:dreamsxin@qq.com
 
