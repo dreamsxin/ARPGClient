@@ -70,6 +70,7 @@ package
 		
 		//游戏视窗
 		private var minimap:MiniMap;
+		private var mapScene:MapScene;
 		private var floorScene:IsoScene;
 		private var mainScene:IsoScene;
 		private var frontScene:IsoScene;
@@ -257,6 +258,11 @@ package
 
 			if (mapdata.grid.attribute('tileSize')) this.tileSize = mapdata.grid.attribute('tileSize');
 
+			if (mapdata.map) 
+            {
+                var sizearr:Array = mapdata.map.attribute("size").toString().split(",");
+                this.mapScene.initialize(mapdata.map.attribute("name"), sizearr[0], sizearr[1], mapdata.map.attribute("w"), mapdata.map.attribute("h"));
+            }
 			//地图数据
 			if (!tileMap) tileMap=new TileMap();
 			tileMap.initialize(mapdata.grid.attribute('w'), mapdata.grid.attribute('h'));
@@ -625,6 +631,9 @@ package
 			//view.viewRenderers = [new ClassFactory(DefaultViewRenderer)];//,new ClassFactory(ViewBoundsRenderer)
 			//view.setSize(300, 400);
 			view.setSize(stage.stageWidth, stage.stageHeight);
+			
+			mapScene = new MapScene();
+            view.addScene(this.mapScene);
 
 			/** 场景 地板 **/
 			floorScene=new IsoScene();
