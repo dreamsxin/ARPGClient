@@ -70,6 +70,7 @@ package
 		
 		//游戏视窗
 		private var minimap:MiniMap;
+		private var grid:IsoGrid;
 		private var mapScene:MapScene;
 		private var floorScene:IsoScene;
 		private var mainScene:IsoScene;
@@ -259,13 +260,15 @@ package
 			if (mapdata.grid.attribute('tileSize')) this.tileSize = mapdata.grid.attribute('tileSize');
 
 			if (mapdata.map) 
-            {
-                var sizearr:Array = mapdata.map.attribute("size").toString().split(",");
-                this.mapScene.initialize(mapdata.map.attribute("name"), sizearr[0], sizearr[1], mapdata.map.attribute("w"), mapdata.map.attribute("h"));
-            }
+            		{
+                		var sizearr:Array = mapdata.map.attribute("size").toString().split(",");
+                		this.mapScene.initialize(mapdata.map.attribute("name"), sizearr[0], sizearr[1], mapdata.map.attribute("w"), mapdata.map.attribute("h"));
+            		}
 			//地图数据
 			if (!tileMap) tileMap=new TileMap();
 			tileMap.initialize(mapdata.grid.attribute('w'), mapdata.grid.attribute('h'));
+
+			grid.setGridSize(mapdata.grid.attribute('w'), mapdata.grid.attribute('h'));
 			
 			
 			var a:IsoSprite=new IsoSprite();
@@ -633,7 +636,7 @@ package
 			view.setSize(stage.stageWidth, stage.stageHeight);
 			
 			mapScene = new MapScene();
-            view.addScene(this.mapScene);
+            		view.addScene(this.mapScene);
 
 			/** 场景 地板 **/
 			floorScene=new IsoScene();
@@ -662,7 +665,7 @@ package
 			
 			//前景
 			frontScene = new IsoScene;
-			var grid:IsoGrid=new IsoGrid();
+			grid=new IsoGrid();
 			grid.showOrigin = false;
 			grid.gridlines = new Stroke(0, 0xCCCCCC, 0.1);
 			grid.cellSize=tileSize;
