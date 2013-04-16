@@ -269,7 +269,7 @@ package
 			tileMap.initialize(mapdata.grid.attribute('w'), mapdata.grid.attribute('h'));
 
 			grid.setGridSize(mapdata.grid.attribute('w'), mapdata.grid.attribute('h'));
-			
+			grid.render();
 			
 			var a:IsoSprite=new IsoSprite();
 			a.setSize(this.tileSize*2, this.tileSize*1/2, this.tileSize*1/2);
