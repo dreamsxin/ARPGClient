@@ -32,6 +32,8 @@ Home:http://www.myleftstudio.org/
 
 Email:dreamsxin@qq.com
 
-![Screenshot](http://as3chat.googlecode.com/files/login.jpg)
-![Screenshot](http://as3chat.googlecode.com/files/hello.jpg)
+
+![https://github.com/dreamsxin/as3chat/blob/master/image/login.jpg](https://github.com/dreamsxin/as3chat/blob/master/image/login.jpg?raw=true)
+![https://github.com/dreamsxin/as3chat/blob/master/image/hello.jpg](https://github.com/dreamsxin/as3chat/blob/master/image/hello.jpg?raw=true)
+![https://github.com/dreamsxin/as3chat/blob/master/image/arpg-model.jpg](https://github.com/dreamsxin/as3chat/blob/master/image/arpg-model.jpg?raw=true)
 
