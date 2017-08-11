@@ -10,9 +10,9 @@ AS3实现的RPG游戏模型。
 Demo：http://myleft.org
 点击“登录”即可。
 
-UI库ASWing：http://code.google.com/p/aswing/
+UI库ASWing：http://code.google.com/p/aswing/ https://github.com/dreamsxin/aswing
 
-ISO(Isometric)库AS3isolib：http://code.google.com/p/as3isolib/
+ISO(Isometric)库AS3isolib：https://github.com/as3isolib/as3isolib.v1
 
 A*寻路的开源库：http://code.google.com/p/baseoneaslib/
 
