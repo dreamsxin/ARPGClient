@@ -29,8 +29,8 @@ package
                 {
                     filename = path + x + "_" + y + ".png";
                     mapsprite = new BitmapSprite(filename, sizew, sizeh);
-                    mapsprite.x = sizew * x - px;
-                    mapsprite.y = sizeh * y - py;
+                    mapsprite.x = sizew * y - px;
+                    mapsprite.y = sizeh * x - py;
                     this.container.addChild(mapsprite);
                     trace("MapScene initialize filename:" + filename);
                     ++y;

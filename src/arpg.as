@@ -60,7 +60,7 @@ package
 		private var server:MyleftServer;
 		
 		private var param:Object;
-		private var host:String = 'myleft.org';
+		private var host:String = 'localhost';
 		private var port:int = 8888;
 		private var userJlist:JList
 		private var model:VectorListModel = new VectorListModel;
@@ -666,7 +666,7 @@ package
 			//前景
 			frontScene = new IsoScene;
 			grid=new IsoGrid();
-			grid.showOrigin = false;
+			grid.showOrigin = true;
 			grid.gridlines = new Stroke(0, 0xCCCCCC, 0.1);
 			grid.cellSize=tileSize;
 			grid.setGridSize(20, 20);
