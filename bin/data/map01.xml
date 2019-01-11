@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map>
+<title>大厅</title>
+<grid tileSize="50" w="20" h="20" />
+<map name="1" size="320,168" w="10" h="10"/>
+<background name="yanyu_bg"/>
+<foreground name="yanyu_bg"/>
+<floors/>
+<building>
+<item name="b01" pos="4,8,0" size="2,2,4" walkable="0"/>
+<item name="b02" pos="6,6,0" size="2,2,1" walkable="0"/>
+<item name="b03" pos="12,5,0" size="4,4,4" walkable="0"/>
+<item name="b04" pos="14,12,0" size="4,4,2" walkable="0"/>
+<item name="b05" pos="3,1,0" size="1,1,1" walkable="0"/>
+<item name="b06" pos="9,3,2" size="1,1,6" walkable="1"/>
+<item name="stone" pos="7,4,0" size="1,1,2" walkable="0"/>
+</building>
+</map>
