@@ -18,8 +18,8 @@ package
             var mapsprite:BitmapSprite=null;
             this.removeAllChildren();
             var path:String="assets/map/" + name + "/";
-            var px:int=sizew *  w / 2;
-            var py:int=sizeh * h / 2;
+            var px:int=sizew *  7;
+            var py:int=sizeh * 3;
             var x:int=0;
             var y:int=0;
             while (x < w) 
