@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map>
 <title>大厅</title>
-<grid tileSize="50" w="20" h="20" />
+<grid tileSize="50" w="40" h="40" />
 <map name="1" size="320,168" w="10" h="10"/>
 <background name="yanyu_bg"/>
 <foreground name="yanyu_bg"/>

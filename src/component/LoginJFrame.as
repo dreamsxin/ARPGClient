@@ -25,7 +25,14 @@ package component
 			super(owner, title, modal);
 			this.setClosable(false);
 			loginForm = new Form;
-			characterComboBox = new JComboBox(new Array(new ComboboxItem('Qitiandasheng', '齐天大圣'), new ComboboxItem('Huadan', '花旦'), new ComboboxItem('Monkey', '小猴子'), new ComboboxItem('Foxfairy', '媚灵狐'), new ComboboxItem('Zhubajie', '猪八戒')));
+			characterComboBox = new JComboBox(new Array(
+				new ComboboxItem('Qitiandasheng', '齐天大圣'), 
+				new ComboboxItem('Huadan', '花旦'), 
+				new ComboboxItem('Monkey', '小猴子'), 
+				new ComboboxItem('Foxfairy', '媚灵狐'), 
+				new ComboboxItem('Zhubajie', '猪八戒'), 
+				new ComboboxItem('Kongquezuoji', '孔雀坐骑')
+			));
 			characterComboBox.setPreferredWidth(100);
 			characterComboBox.setSelectedIndex(0);
 			this.addLabelRow(characterComboBox, "角色选择");

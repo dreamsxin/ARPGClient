@@ -112,6 +112,7 @@ package
 		private var nezha:Nezha;
 		private var qitiandasheng:Qitiandasheng;
 		private var huadan:Huadan;
+		private var kongquezuoji:Kongquezuoji;
 		
 		//菜单
 		
@@ -636,7 +637,8 @@ package
 			view.setSize(stage.stageWidth, stage.stageHeight);
 			
 			mapScene = new MapScene();
-            		view.addScene(this.mapScene);
+			mapScene.hostContainer=this;
+			view.addScene(this.mapScene);
 
 			/** 场景 地板 **/
 			floorScene=new IsoScene();

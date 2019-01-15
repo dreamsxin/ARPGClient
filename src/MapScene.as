@@ -1,6 +1,8 @@
 //class MapScene
 package 
 {
+	import as3isolib.geom.IsoMath;
+	import as3isolib.geom.Pt;
     import as3isolib.display.scene.*;
     import org.myleft.core.*;
     
@@ -18,7 +20,7 @@ package
             var mapsprite:BitmapSprite=null;
             this.removeAllChildren();
             var path:String="assets/map/" + name + "/";
-            var px:int=sizew *  7;
+            var px:int=sizew * 7;
             var py:int=sizeh * 3;
             var x:int=0;
             var y:int=0;
@@ -27,10 +29,11 @@ package
                 y = 0;
                 while (y < h) 
                 {
-                    filename = path + x + "_" + y + ".png";
+                    filename = path + y + "_" + x + ".png";
                     mapsprite = new BitmapSprite(filename, sizew, sizeh);
-                    mapsprite.x = sizew * y - px;
-                    mapsprite.y = sizeh * x - py;
+                    mapsprite.x = sizew * x - px;
+                    mapsprite.y = sizeh * y - py;
+                   
                     this.container.addChild(mapsprite);
                     trace("MapScene initialize filename:" + filename);
                     ++y;
