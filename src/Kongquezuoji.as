@@ -8,7 +8,7 @@ package
 		
 		public function Kongquezuoji(username:String='') 
 		{
-			this.standSprite = new BitmapSprite('assets/character/kongquezuoji_01.png', 548, 354, -274, -177);
+			this.standSprite = new BitmapSprite('assets/character/kongquezuoji_01.png', 478, 302, -269, -200);
 			this.walkSprite = new BitmapSprite('assets/character/kongquezuoji_02.png', 646, 392, -323, -196);
 			
 			this.tile = new BitmapSprite('assets/tile/0.png', 100, 48);
