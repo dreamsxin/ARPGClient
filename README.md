@@ -21,7 +21,8 @@ A*寻路的开源库：http://code.google.com/p/baseoneaslib/
 https://github.com/dreamsxin/AS3Chat
 
 ## Other
-https://github.com/dreamsxin/AllView
+- https://github.com/dreamsxin/AllView
+- https://github.com/dreamsxin/OnLook
 
 QQ:176013762
 
