@@ -3,7 +3,7 @@ ARPGClient
 
 This Client is simple RPG client, use AS3 write, cross-platform.
 
-Server:
+## Server:
 
 https://github.com/dreamsxin/ARPGServer
 
@@ -17,10 +17,11 @@ ISO(Isometric)库AS3isolib：https://github.com/as3isolib/as3isolib.v1
 
 A*寻路的开源库：http://code.google.com/p/baseoneaslib/
 
-
-Text Chat:
-
+## Text Chat:
 https://github.com/dreamsxin/AS3Chat
+
+## Other
+https://github.com/dreamsxin/AllView
 
 QQ:176013762
 
