@@ -1,0 +1,35 @@
+<script src="https://unpkg.com/spritejs@3/dist/spritejs.js"></script>
+<div id="adaptive" style="width:1200px;height:600px"></div>
+<script>
+const {Scene, Path, Sprite, Gradient} = spritejs;
+const container = document.getElementById('adaptive');
+const scene = new Scene({
+  container,
+  width: 1200,
+  height: 600,
+});
+const layer = scene.layer();
+
+const birdsJsonUrl = 'qitiandasheng_01.json';
+const birdsRes = 'qitiandasheng_01.png';
+
+(async function () {
+  await scene.preload([birdsRes, birdsJsonUrl]);
+  const bird = new Sprite('qitiandasheng01.png');
+  bird.attr({
+    anchor: [0, 0],
+    size: [250, 220],
+    zIndex: 200,
+  });
+
+  layer.append(bird);
+
+  let i = 0;
+  setInterval(() => {
+	i++;
+    bird.attributes.texture = 'qitiandasheng0'+(i % 8+1)+'.png';
+  }, 100);
+
+
+}());
+</script>
